@@ -23,4 +23,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: yarn install
+      working-directory: ./scraping
     - run: yarn test
+      working-directory: ./scraping
