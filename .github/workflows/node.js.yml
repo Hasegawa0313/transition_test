@@ -49,7 +49,7 @@ jobs:
           aws configure get aws_access_key_id --profile eyemovic-dev
 
           # SSHポートを開放する
-          aws --profile eyemovic-dev ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr "$IP_ADDRESS"/32
+          aws --profile eyemovic-dev ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr 3.132.214.137/32
 
           # SSH接続して、git pullする
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
@@ -62,4 +62,4 @@ jobs:
           '
 
           # SSHのポートを閉じる
-          aws --profile eyemovic-dev ec2 revoke-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr "$IP_ADDRESS"/32
+          aws --profile eyemovic-dev ec2 revoke-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr 3.132.214.137/32
