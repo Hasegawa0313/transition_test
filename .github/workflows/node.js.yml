@@ -52,8 +52,8 @@ jobs:
           # aws --profile eyemovic-dev ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr 3.132.214.137/32
 
           # SSH接続して、git pullする
-          echo "$PRIVATE_KEY" > private_key && chmod 600 private_key 
-          ssh -o StrictHostKeyChecking=no -i private_key -vvv ${USER_NAME}@${HOST_NAME} '
+          echo "$PRIVATE_KEY" > github_key && chmod 600 github_key 
+          ssh -o StrictHostKeyChecking=no -i github_key -vvv ${USER_NAME}@${HOST_NAME} '
           cd /home/centos/transition_test &&
           git checkout main &&
           git fetch --all &&
