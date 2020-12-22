@@ -58,8 +58,7 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           cd /home/centos/ &&
-          anyenv install --init
-          exec $SHELL -l &&
+          anyenv install --init &&
           node -v &&
           npm install -g yarn && 
           cd test_sample &&
