@@ -57,6 +57,7 @@ jobs:
           git fetch --all &&
           git reset --hard origin/main &&
           git pull origin main &&
+          who &&
           npm install -g yarn && 
           cd test_sample &&
           yarn install &&
