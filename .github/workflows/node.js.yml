@@ -60,7 +60,6 @@ jobs:
           cd /home/centos/ &&
           echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile &&
           echo 'eval "$(anyenv init -)"' >> ~/.bash_profile &&
-          exec $SHELL -l &&
           echo $PATH &&
           npm install -g yarn && 
           cd test_sample &&
