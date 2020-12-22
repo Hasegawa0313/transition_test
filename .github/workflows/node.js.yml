@@ -60,6 +60,7 @@ jobs:
           cd /home/centos/ &&
           export PATH="$HOME/.anyenv/bin:$PATH" &&
           echo $PATH &&
+          node -v &&
           npm install -g yarn && 
           cd test_sample &&
           yarn install &&
