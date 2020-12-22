@@ -59,6 +59,7 @@ jobs:
           git pull origin main &&
           cd /home/centos/ &&
           ls -a &&
+          source ~/.nvm/nvm.sh &&
           node -v &&
           npm install -g yarn && 
           cd test_sample &&
