@@ -59,6 +59,8 @@ jobs:
           git pull origin main &&
           cd /home/centos/ &&
           export PATH="/home/centos/.anyenv/bin:$PATH" &&
+          export PATH="/home/centos/.anyenv/envs/nodenv/bin:$PATH" &&
+          export PATH="/home/centos/.anyenv/envs/nodenv/shims:$PATH" &&
           anyenv install nodenv &&
           nodenv install 12.20.0 &&
           nodenv global 12.20.0 &&
