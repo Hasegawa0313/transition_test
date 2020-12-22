@@ -60,7 +60,7 @@ jobs:
           '
 
           # 依存関係などのインストール
-          pwd
+          ls
           cd /home/centos/transition_test/test_sample
           yarn install
           cd /home/centos/transition_test/scraping
