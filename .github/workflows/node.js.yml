@@ -63,7 +63,7 @@ jobs:
           export PATH="/home/centos/.anyenv/envs/nodenv/shims:$PATH" &&
           node -v &&
           npm install -g yarn && 
-          cd test_sample &&
+          cd transition_test/test_sample &&
           yarn install &&
           cd ../scraping &&
           yarn install &&
