@@ -66,8 +66,8 @@ jobs:
           nodenv rehash &&
           cd transition_test/test_sample &&
           yarn install &&
-          cd ../scraping &&
-          yarn install &&
+          # cd ../scraping &&
+          # yarn install &&
           forever start /home/centos/transition_test/test_sample/bin/www
           '
 
