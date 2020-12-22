@@ -58,14 +58,15 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           cd /home/centos/ &&
-          echo $PATH &&
-          npm install -g yarn && 
-          cd test_sample &&
-          yarn install &&
-          cd ../scraping &&
-          yarn install &&
-          forever start /home/centos/transition_test/test_sample/bin/www
+          echo $PATH 
           '
+
+          # npm install -g yarn && 
+          # cd test_sample &&
+          # yarn install &&
+          # cd ../scraping &&
+          # yarn install &&
+          # forever start /home/centos/transition_test/test_sample/bin/www
 
 
           
