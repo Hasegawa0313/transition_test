@@ -58,6 +58,7 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           cd /home/centos/ &&
+          echo $PATH &&
           sudo node -v &&
           npm install -g yarn && 
           cd test_sample &&
