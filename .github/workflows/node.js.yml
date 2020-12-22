@@ -48,9 +48,7 @@ jobs:
           printf "${ACCESS_KEY}\n${SECRET_ACCESS_KEY}\nap-northeast-1\njson\n" | aws configure --profile eyemovic-dev
           aws configure get aws_access_key_id --profile eyemovic-dev
 
-          # SSHポートを開放する
-          # aws --profile eyemovic-dev ec2 authorize-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr 3.132.214.137/32
-
+          
           # SSH接続して、git pullする
           echo "$PRIVATE_KEY" > github_key && chmod 600 github_key 
           ssh -o StrictHostKeyChecking=no -i github_key ${USER_NAME}@${HOST_NAME} '
@@ -61,5 +59,15 @@ jobs:
           git pull origin main
           '
 
-          # SSHのポートを閉じる
-          # aws --profile eyemovic-dev ec2 revoke-security-group-ingress --group-id ${SECURITY_GROUP} --protocol tcp --port 22 --cidr 3.132.214.137/32
+          # 依存関係などのインストール
+          npm install -g yarn
+          cd /home/centos/transition_test/test_sample
+          yarn install
+          cd /home/centos/transition_test/scraping
+          yarn install
+
+          # アプリの再起動
+          forever start /home/centos/transition_test/test_sample/bin/www
+
+
+          
