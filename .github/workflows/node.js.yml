@@ -56,19 +56,14 @@ jobs:
           git checkout main &&
           git fetch --all &&
           git reset --hard origin/main &&
-          git pull origin main
-          cd test_sample
-          yarn install
-          cd ../scraping
-          yarn install
+          git pull origin main &&
+          npm install -g yarn && 
+          cd test_sample &&
+          yarn install &&
+          cd ../scraping &&
+          yarn install &&
           forever start /home/centos/transition_test/test_sample/bin/www
           '
-
-          # 依存関係などのインストール
-          
-
-          # アプリの再起動
-          
 
 
           
