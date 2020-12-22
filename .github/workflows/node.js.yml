@@ -62,6 +62,7 @@ jobs:
           echo 'PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile &&
           echo 'eval "$(anyenv init -)"' >> ~/.bash_profile &&
           exec $SHELL -l &&
+          ls -a &&
           node -v &&
           npm install -g yarn && 
           cd test_sample &&
