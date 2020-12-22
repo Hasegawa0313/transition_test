@@ -60,10 +60,9 @@ jobs:
           '
 
           # 依存関係などのインストール
-          ls
-          cd /home/centos/transition_test/test_sample
+          cd test_sample
           yarn install
-          cd /home/centos/transition_test/scraping
+          cd ../scraping
           yarn install
 
           # アプリの再起動
