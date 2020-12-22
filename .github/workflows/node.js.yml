@@ -58,10 +58,6 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           cd /home/centos/ &&
-          git clone https://github.com/riywo/anyenv ~/.anyenv &&
-          echo 'PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile &&
-          echo 'eval "$(anyenv init -)"' >> ~/.bash_profile &&
-          exec $SHELL -l &&
           ls -a &&
           node -v &&
           npm install -g yarn && 
