@@ -58,8 +58,7 @@ jobs:
           git reset --hard origin/main &&
           git pull origin main &&
           cd /home/centos/ &&
-          echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile &&
-          echo 'eval "$(anyenv init -)"' >> ~/.bash_profile &&
+          export PATH="$HOME/.anyenv/bin:$PATH" &&
           echo $PATH &&
           npm install -g yarn && 
           cd test_sample &&
