@@ -17,3 +17,7 @@ RUN cd ./test_sample; yarn install --production
 COPY . .
 
 EXPOSE  8080
+
+WORKDIR /usr/src/app/transition_test/test_sample
+
+CMD ["yarn", "start"]
