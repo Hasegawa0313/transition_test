@@ -16,7 +16,7 @@ RUN cd ./test_sample; yarn install --production
 # Bundle app source
 COPY . .
 
-EXPOSE  8080
+EXPOSE  8081:8080
 
 WORKDIR /usr/src/app/test_sample
 
