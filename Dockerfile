@@ -10,7 +10,7 @@ RUN     npm install -g yarn
 WORKDIR /usr/src/app
 
 # Install app dependencies
-COPY package.json /transition_test/test_sample/package.json
+COPY ./test_sample/package.json ./test_sample/package.json
 RUN cd /transition_test/test_sample; yarn install --production
 
 # Bundle app source
