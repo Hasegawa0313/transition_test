@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 
 # Install app dependencies
 COPY ./test_sample/package.json ./test_sample/package.json
-RUN cd /transition_test/test_sample; yarn install --production
+RUN cd ./test_sample; yarn install --production
 
 # Bundle app source
 COPY . .
