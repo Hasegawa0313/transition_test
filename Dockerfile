@@ -7,12 +7,13 @@ RUN     yum install -y nodejs npm
 
 RUN     npm install -g yarn
 
+WORKDIR /usr/src/app
+
 # Install app dependencies
 COPY package.json /transition_test/test_sample/package.json
 RUN cd /transition_test/test_sample; yarn install --production
 
 # Bundle app source
-COPY . /transition_test/test_sample
+COPY . .
 
 EXPOSE  8080
-CMD ["node", ""]
