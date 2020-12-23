@@ -18,6 +18,6 @@ COPY . .
 
 EXPOSE  8080
 
-WORKDIR /usr/src/app/transition_test/test_sample
+WORKDIR /usr/src/app/test_sample
 
 CMD ["yarn", "start"]
