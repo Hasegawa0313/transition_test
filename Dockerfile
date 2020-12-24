@@ -14,8 +14,6 @@ WORKDIR /usr/src/app
 # nginxの設定書き換え
 COPY ./docker/default.conf /etc/nginx/conf.d/default.conf
 
-RUN     systemctl start nginx
-
 # Install app dependencies
 COPY ./test_sample/package.json ./test_sample/package.json
 RUN cd ./test_sample; yarn install --production
