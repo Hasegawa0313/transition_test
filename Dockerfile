@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 # nginxの設定書き換え
 COPY ./docker/default.conf /etc/nginx/conf.d/default.conf
 
-RUN     nginx, -g, daemon off
+RUN     nginx -g daemon off
 
 # Install app dependencies
 COPY ./test_sample/package.json ./test_sample/package.json
