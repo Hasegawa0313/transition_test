@@ -1,0 +1,41 @@
+body {
+  padding: 0 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+header {
+  height: 80px;
+  font-family: 'Audiowide', cursive;
+  font-size: 40px;
+  line-height: 80px; }
+
+.container {
+  content: '';
+  clear: both;
+  display: block; }
+  .container .content {
+    margin-bottom: 16px; }
+  .container .side-col {
+    float: left;
+    width: 216px;
+    height: calc(100vh - 160px);
+    border-right: 1px solid #ccc; }
+    .container .side-col .list {
+      list-style: none; }
+      .container .side-col .list--main {
+        padding-left: 0; }
+      .container .side-col .list--child {
+        padding-left: 24px; }
+      .container .side-col .list li {
+        margin-bottom: 8px; }
+  .container .main-col {
+    float: left;
+    width: calc(100% - 216px);
+    height: calc(100vh - 160px);
+    padding: 0 0 8px 40px; }
+    .container .main-col .result-text {
+      width: 100%;
+      height: 500px; }
+  .container a {
+    color: #00B7FF; }
+
+/*# sourceMappingURL=style.css.map */

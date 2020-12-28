@@ -1,0 +1,59 @@
+body {
+  padding: 0 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+header {
+  height: 80px;
+  font-family: 'Audiowide', cursive;
+  font-size: 40px;
+  line-height: 80px;
+}
+
+.container {
+  content: '';
+  clear: both;
+  display: block;
+
+  .content {
+    margin-bottom: 16px;
+  }
+
+  .side-col {
+    float: left;
+    width: 216px;
+    height: calc(100vh - 160px);
+    border-right: 1px solid #ccc;
+
+    .list {
+      list-style: none;
+      &--main {
+        padding-left: 0;
+      }
+      &--child {
+        padding-left: 24px;
+      }
+      li {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  .main-col {
+    float: left;
+    width: calc(100% - 216px);
+    height: calc(100vh - 160px);
+
+    padding: 0 0 8px 40px;
+
+    .result-text {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  a {
+    color: #00B7FF;
+  }
+}
+
