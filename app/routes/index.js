@@ -9,7 +9,7 @@ router.get("/", function (req, res, next) {
 
 router.get("/test_start", (req, res, next) => {
   (async () => {
-    const resultString = await test.transitionTest(req.query.url);
+    const resultString = await test.transitionTest(req.query.url, null, req.query.hierarchy);
     res.json({ message: "complete", result: resultString });
   })().catch(next);
 });

@@ -1,6 +1,6 @@
 const puppeteer = require("puppeteer");
 
-exports.transitionTest = async function transitionTest(url, noTestPage) {
+exports.transitionTest = async function transitionTest(url, noTestPage, times) {
   const browser = await puppeteer.launch({
     args: ["--disable-web-security", "--no-sandbox", "--disable-setuid-sandbox"],
   });
@@ -12,6 +12,7 @@ exports.transitionTest = async function transitionTest(url, noTestPage) {
   let linkList = [url];
   let allLinkList = [];
   let listExists = true;
+  let i = 0;
   while (listExists) {
     let resultList = [];
     let resultLinkList = [];
@@ -57,11 +58,12 @@ exports.transitionTest = async function transitionTest(url, noTestPage) {
 
     // 未取得分を付け足す
     allLinkList = allLinkList.concat(resultList);
-    if (resultLinkList && resultLinkList.length <= 0) {
+    if ((resultLinkList && resultLinkList.length <= 0) || (times && times == i)) {
       listExists = false;
     } else {
       linkList = resultLinkList;
     }
+    i++;
   }
 
   console.log(allLinkList);
