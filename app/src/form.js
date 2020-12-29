@@ -52,6 +52,6 @@ class Form extends React.Component {
   }
 }
 
-// const domContainer = document.querySelector("#form");
-// render(<Form />, domContainer);
+const domContainer = document.querySelector("#form");
+render(<Form />, domContainer);
 export default Form;
